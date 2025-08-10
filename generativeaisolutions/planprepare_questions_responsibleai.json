@@ -1,0 +1,52 @@
+[
+    {
+        question: "Which of the following is NOT one of the six core principles of Responsible AI adopted by Microsoft?",
+        options: ["Fairness", "Reliability and Safety", "Profitability", "Accountability"],
+        answer: "Profitability"
+    },
+    {
+        question: "According to the 'Fairness' principle, what is a key action developers should take when creating a loan approval model?",
+        options: ["Use the newest AI model available.", "Carefully review training data to ensure it's representative and free of bias.", "Ensure the model provides a confidence score.", "Only use data from previously approved loans."],
+        answer: "Carefully review training data to ensure it's representative and free of bias."
+    },
+    {
+        question: "The 'Reliability and Safety' principle is especially critical for which type of AI system?",
+        options: ["An AI that recommends music.", "An AI-based system for an autonomous vehicle.", "An AI that generates social media posts.", "An AI that summarizes news articles."],
+        answer: "An AI-based system for an autonomous vehicle."
+    },
+    {
+        question: "What must software engineers take into account due to the 'probabilistic nature of machine learning models'?",
+        options: ["That models will always be 100% accurate.", "That models do not require extensive testing.", "The need to apply appropriate thresholds when evaluating confidence scores.", "That models can only be used for simple tasks."],
+        answer: "The need to apply appropriate thresholds when evaluating confidence scores."
+    },
+    {
+        question: "Which principle states that AI systems should be secure and respect that models may rely on data containing personal details?",
+        options: ["Transparency", "Inclusiveness", "Privacy and Security", "Accountability"],
+        answer: "Privacy and Security"
+    },
+    {
+        question: "How can developers best optimize for the 'Inclusiveness' principle?",
+        options: ["By making the user interface visually simple.", "By ensuring the design and testing process includes input from a diverse group of people.", "By using only the most popular programming languages.", "By providing the service for free."],
+        answer: "By ensuring the design and testing process includes input from a diverse group of people."
+    },
+    {
+        question: "The 'Transparency' principle requires that users should be made fully aware of what?",
+        options: ["The exact algorithms used in the model.", "The cost to run the AI system.", "The system's purpose, how it works, and its expected limitations.", "The names of the developers who created the system."],
+        answer: "The system's purpose, how it works, and its expected limitations."
+    },
+    {
+        question: "What is the core idea behind the 'Accountability' principle in Responsible AI?",
+        options: ["The AI system is solely accountable for its own actions.", "The end-user is accountable for how they interpret the results.", "The developers who trained and validated the models are ultimately responsible for the system.", "Accountability is determined by government regulators after a system is deployed."],
+        answer: "The developers who trained and validated the models are ultimately responsible for the system."
+    },
+    {
+        question: "Sharing information with a user about the confidence score of a prediction is a direct application of which principle?",
+        options: ["Fairness", "Inclusiveness", "Reliability and Safety", "Transparency"],
+        answer: "Transparency"
+    },
+    {
+        question: "What is the first step software engineers should take to mitigate risks and ensure responsible AI?",
+        options: ["Start coding the application immediately.", "Consider fairness from the beginning of the development process.", "Choose the cheapest available model.", "Focus only on the accuracy of the model."],
+        answer: "Consider fairness from the beginning of the development process."
+    }
+]

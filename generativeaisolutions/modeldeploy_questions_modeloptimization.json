@@ -1,0 +1,102 @@
+[
+    {
+        question: "What is the process of designing and optimizing prompts to improve a language model's performance called?",
+        options: ["Model Deployment", "Fine-tuning", "Prompt Engineering", "Retrieval Augmented Generation"],
+        answer: "Prompt Engineering"
+    },
+    {
+        question: "Which prompt pattern involves instructing the model to take on a specific point of view, like a 'seasoned marketing professional'?",
+        options: ["Adding Context", "Specifying a Format", "Acting as a Persona", "Chain-of-Thought"],
+        answer: "Acting as a Persona"
+    },
+    {
+        question: "What is the purpose of a 'system prompt' in a chat application?",
+        options: ["It is the first question the user asks.", "It sets the model's behavior and provides instructions without exposing them to the end user.", "It is the final response from the model.", "It is a log of the entire conversation."],
+        answer: "It sets the model's behavior and provides instructions without exposing them to the end user."
+    },
+    {
+        question: "If you want a model to generate output in a specific format like a JSON object or a table, which prompt pattern should you use?",
+        options: ["Asking for better question suggestions", "Specifying the desired format for responses", "Instructing the model to act as a persona", "Asking for an explanation of reasoning"],
+        answer: "Specifying the desired format for responses"
+    },
+    {
+        question: "What is the 'chain-of-thought' technique used for?",
+        options: ["To make the model respond faster.", "To make the model think step-by-step and explain its reasoning.", "To connect the model to an external data source.", "To fine-tune the model on a new dataset."],
+        answer: "To make the model think step-by-step and explain its reasoning."
+    },
+    {
+        question: "What is the primary goal of Retrieval Augmented Generation (RAG)?",
+        options: ["To change the model's conversational style.", "To provide grounding context to prompts from a trusted data source.", "To reduce the cost of model deployment.", "To increase the speed of the model's response."],
+        answer: "To provide grounding context to prompts from a trusted data source."
+    },
+    {
+        question: "When is it most appropriate to use fine-tuning to optimize a model?",
+        options: ["When the model lacks contextual knowledge about recent events.", "When you want to maximize the consistency of a model's behavior, style, and format.", "As the very first step in any optimization effort.", "When you need to connect to a single, small data source."],
+        answer: "When you want to maximize the consistency of a model's behavior, style, and format."
+    },
+    {
+        question: "According to the optimization strategy diagram, which technique is best for 'Context optimization' (what the model needs to know)?",
+        options: ["Prompt engineering", "Fine-tuning", "Retrieval Augmented Generation (RAG)", "Combined strategies"],
+        answer: "Retrieval Augmented Generation (RAG)"
+    },
+    {
+        question: "What is the recommended first step in any model optimization effort?",
+        options: ["Fine-tuning", "Retrieval Augmented Generation (RAG)", "Prompt engineering", "Deploying a new model"],
+        answer: "Prompt engineering"
+    },
+    {
+        question: "Providing one or more examples of the desired output within a prompt is known as what kind of approach?",
+        options: ["Zero-shot", "One-shot or few-shots", "Chain-of-thought", "Persona-based"],
+        answer: "One-shot or few-shots"
+    },
+    {
+        question: "When would RAG be a particularly useful approach?",
+        options: ["When you want the model to adopt a sarcastic tone.", "When you need the model to answer questions based on events that occurred after its training data was created.", "When you want to reduce the number of tokens in the prompt.", "When you want to change the model's core architecture."],
+        answer: "When you need the model to answer questions based on events that occurred after its training data was created."
+    },
+    {
+        question: "What is the primary trade-off when choosing between prompt engineering and more complex strategies like RAG or fine-tuning?",
+        options: ["Prompt engineering is more effective but slower.", "RAG and fine-tuning involve additional cost, complexity, and maintainability challenges.", "Prompt engineering only works with small models.", "RAG cannot be combined with prompt engineering."],
+        answer: "RAG and fine-tuning involve additional cost, complexity, and maintainability challenges."
+    },
+    {
+        question: "How can you guide a model to suggest better questions and provide more context?",
+        options: ["By telling it to be brief.", "By asking it to suggest clarifying questions in your prompt.", "By fine-tuning it on a Q&A dataset.", "By using a smaller model."],
+        answer: "By asking it to suggest clarifying questions in your prompt."
+    },
+    {
+        question: "If a model's behavior isn't consistent even after using prompt engineering, what is the next logical optimization strategy to enforce consistency?",
+        options: ["Deploying a larger model.", "Using a different API.", "Fine-tuning the model.", "Adding more examples to the prompt."],
+        answer: "Fine-tuning the model."
+    },
+    {
+        question: "What does it mean to 'ground your data' in the context of RAG?",
+        options: ["Storing your data on-premises.", "First retrieving context from a data source before generating a response.", "Encrypting your data before sending it to the model.", "Deleting old data from your knowledge base."],
+        answer: "First retrieving context from a data source before generating a response."
+    },
+    {
+        question: "Which prompt pattern helps ensure a conversation stays on track by specifying what the model should or shouldn't include?",
+        options: ["Acting as a Persona", "Adding Context", "Specifying a Format", "Chain-of-Thought"],
+        answer: "Adding Context"
+    },
+    {
+        question: "The diagram shows that combining strategies is an option. What would be an example of a combined strategy?",
+        options: ["Using only prompt engineering.", "Using only fine-tuning.", "Using RAG with a fine-tuned model and prompt engineering.", "Using two different base models at the same time."],
+        answer: "Using RAG with a fine-tuned model and prompt engineering."
+    },
+    {
+        question: "What is the goal of providing a template in a prompt?",
+        options: ["To confuse the model.", "To get the model to generate output in a specific, structured format.", "To test the model's creativity.", "To make the prompt longer."],
+        answer: "To get the model to generate output in a specific, structured format."
+    },
+    {
+        question: "If you want an employee chatbot to answer questions based on your company's internal expense policy documents, which optimization strategy is most suitable?",
+        options: ["Fine-tuning", "Retrieval Augmented Generation (RAG)", "Acting as a Persona", "Chain-of-Thought"],
+        answer: "Retrieval Augmented Generation (RAG)"
+    },
+    {
+        question: "Which of the following is NOT a recognized prompt pattern for optimization?",
+        options: ["Instruct the model to act as a persona.", "Provide a template for a specific format.", "Ask the model to use as many tokens as possible.", "Add context to improve accuracy."],
+        answer: "Ask the model to use as many tokens as possible."
+    }
+]

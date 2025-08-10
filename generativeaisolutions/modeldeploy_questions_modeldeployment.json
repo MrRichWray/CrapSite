@@ -1,0 +1,52 @@
+[
+    {
+        question: "Why do you need to deploy a language model?",
+        options: ["To train the model on new data.", "To make the model accessible to an application through an endpoint.", "To measure the model's accuracy.", "To select the best model from the catalog."],
+        answer: "To make the model accessible to an application through an endpoint."
+    },
+    {
+        question: "What is an 'endpoint' in the context of model deployment?",
+        options: ["The final layer of a neural network.", "A specific URL where a deployed model can be accessed via an API.", "The client application that uses the model.", "A type of billing plan for model usage."],
+        answer: "A specific URL where a deployed model can be accessed via an API."
+    },
+    {
+        question: "Which model deployment option in Azure AI Foundry is recommended for most scenarios and hosts models in the project resource?",
+        options: ["Serverless compute", "Managed compute", "Standard deployment", "Local deployment"],
+        answer: "Standard deployment"
+    },
+    {
+        question: "Which deployment option hosts models in Microsoft-managed dedicated serverless endpoints within a hub project?",
+        options: ["Standard deployment", "Managed compute", "Serverless compute", "Containerized deployment"],
+        answer: "Serverless compute"
+    },
+    {
+        question: "What is the billing basis for a 'Managed compute' deployment?",
+        options: ["Token-based billing", "Compute-based billing", "A flat monthly fee", "It is always free of charge."],
+        answer: "Compute-based billing"
+    },
+    {
+        question: "What types of models are supported by the 'Standard deployment' option?",
+        options: ["Only open-source models", "Only custom models", "Azure AI Foundry models, including Azure OpenAI and Models-as-a-service.", "Only models with pay-as-you-go billing."],
+        answer: "Azure AI Foundry models, including Azure OpenAI and Models-as-a-service."
+    },
+    {
+        question: "When a user interacts with a chat application, what is the first step in the process of getting a response from a deployed model?",
+        options: ["An API response is sent from the endpoint.", "The model is retrained.", "An API request is sent to the endpoint.", "The user receives a visualization."],
+        answer: "An API request is sent to the endpoint."
+    },
+    {
+        question: "Which deployment option is suitable for hosting open and custom models in managed virtual machine images?",
+        options: ["Standard deployment", "Serverless compute", "Managed compute", "API deployment"],
+        answer: "Managed compute"
+    },
+    {
+        question: "What is the billing basis for 'Standard deployment' and 'Serverless compute' options?",
+        options: ["Compute-based billing", "Based on the number of users", "Token-based billing", "A one-time deployment fee"],
+        answer: "Token-based billing"
+    },
+    {
+        question: "Where are models hosted when using the 'Serverless compute' or 'Managed compute' deployment options?",
+        options: ["In the Azure AI Foundry resource.", "In an AI Project resource within a hub.", "On the user's local machine.", "In a separate Azure subscription."],
+        answer: "In an AI Project resource within a hub."
+    }
+]

@@ -1,0 +1,52 @@
+[
+    {
+        question: "In machine learning, what is the process of using sample data to determine relationships between 'features' and a 'label' called?",
+        options: ["Inferencing", "Training", "Deploying", "Validating"],
+        answer: "Training"
+    },
+    {
+        question: "What is 'inferencing' in the context of a machine learning model?",
+        options: ["The process of creating a new model from scratch.", "Using a trained model to make predictions on new data.", "Orchestrating the deployment of a model.", "Analyzing the ethical impact of a model."],
+        answer: "Using a trained model to make predictions on new data."
+    },
+    {
+        question: "Why should software engineers make use of a model's 'confidence score'?",
+        options: ["Because it indicates the cost of the model.", "Because predictions are based on probability, not absolute truth.", "Because it is required for deploying the model.", "Because it measures the speed of the model's response."],
+        answer: "Because predictions are based on probability, not absolute truth."
+    },
+    {
+        question: "Which Azure service is described as a cloud-based platform for training predictive models and publishing them as services?",
+        options: ["Azure AI Foundry", "Azure OpenAI", "Azure Machine Learning", "Azure AI Search"],
+        answer: "Azure Machine Learning"
+    },
+    {
+        question: "Which feature of Azure Machine Learning provides a graphical interface for no-code development of machine learning solutions?",
+        options: ["Automated machine learning", "Pipelines", "Azure Machine Learning designer", "Data and compute management"],
+        answer: "Azure Machine Learning designer"
+    },
+    {
+        question: "What is the purpose of 'Automated machine learning' in the Azure Machine Learning service?",
+        options: ["To provide a command-line interface for experts.", "To enable non-experts to quickly create an effective machine learning model from data.", "To manage billing and resource quotas.", "To automatically write application code for consuming a model."],
+        answer: "To enable non-experts to quickly create an effective machine learning model from data."
+    },
+    {
+        question: "In the machine learning lifecycle, what are 'Pipelines' used for in Azure Machine Learning?",
+        options: ["To connect to on-premises data sources.", "To provide a visual drag-and-drop interface.", "To orchestrate model training, deployment, and management tasks.", "To store the final trained models."],
+        answer: "To orchestrate model training, deployment, and management tasks."
+    },
+    {
+        question: "How might a software engineer interact with Azure Machine Learning?",
+        options: ["Only by writing complex Python scripts.", "By using Automated ML or the designer to train and deploy models.", "Only by collaborating with certified data scientists.", "By purchasing pre-trained models exclusively."],
+        answer: "By using Automated ML or the designer to train and deploy models."
+    },
+    {
+        question: "What are 'features' and 'labels' in the context of model training?",
+        options: ["Features are the model's predictions, and labels are the input data.", "Features are the input data values, and the label is the value the model is being trained to predict.", "Features are the different versions of a model, and labels are their names.", "Features and labels are both types of confidence scores."],
+        answer: "Features are the input data values, and the label is the value the model is being trained to predict."
+    },
+    {
+        question: "What is a key ethical consideration for AI Engineers mentioned in the 'Supplemental Notes'?",
+        options: ["Ensuring the model is as large as possible.", "Considering the impact of their software and mitigating risks to ensure fairness and reliability.", "Using the newest programming language available.", "Making sure the application is profitable above all else."],
+        answer: "Considering the impact of their software and mitigating risks to ensure fairness and reliability."
+    }
+]

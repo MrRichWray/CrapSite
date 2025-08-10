@@ -1,0 +1,127 @@
+[
+    {
+        question: "What is the primary purpose of the Model Catalog in Azure AI Foundry?",
+        options: ["To deploy custom applications.", "To serve as a central repository for browsing and finding language models for a use case.", "To manage billing and user access.", "To write and debug Python code."],
+        answer: "To serve as a central repository for browsing and finding language models for a use case."
+    },
+    {
+        question: "What were the two key innovations of the Transformer architecture that led to the emergence of foundation models?",
+        options: ["Sequential processing and positional encoding.", "Parallel processing with attention and positional encoding.", "Faster GPUs and larger datasets.", "Recurrent neural networks and backpropagation."],
+        answer: "Parallel processing with attention and positional encoding."
+    },
+    {
+        question: "What is the main difference between Large Language Models (LLMs) and Small Language Models (SLMs)?",
+        options: ["LLMs are open-source, while SLMs are proprietary.", "SLMs are more powerful for tasks requiring deep reasoning.", "LLMs are designed for complex tasks, while SLMs are more efficient and cost-effective for common tasks.", "LLMs can only process text, while SLMs are multi-modal."],
+        answer: "LLMs are designed for complex tasks, while SLMs are more efficient and cost-effective for common tasks."
+    },
+    {
+        question: "Which type of model is specifically designed to convert text into numerical representations to improve search relevance?",
+        options: ["Chat completion models", "Reasoning models", "Embedding models", "Image generation models"],
+        answer: "Embedding models"
+    },
+    {
+        question: "What is a key advantage of using proprietary models like OpenAI's GPT-4 from the model catalog?",
+        options: ["They allow for local deployment and full customization.", "They are always the most cost-effective option.", "They offer cutting-edge performance and are ideal for enterprise use with high security and support.", "They are only available through GitHub."],
+        answer: "They offer cutting-edge performance and are ideal for enterprise use with high security and support."
+    },
+    {
+        question: "What is the benefit of using open-source models from sources like Hugging Face?",
+        options: ["They provide the highest level of enterprise security by default.", "They offer more control, allowing for fine-tuning, customization, and local deployment.", "They come with dedicated 24/7 support from Microsoft.", "They are guaranteed to be free of any bias."],
+        answer: "They offer more control, allowing for fine-tuning, customization, and local deployment."
+    },
+    {
+        question: "In generative AI, what does 'precision' refer to?",
+        options: ["The speed at which the model generates a response.", "The cost per token of using the model.", "The accuracy of the model in generating correct and relevant outputs.", "The number of parameters the model has."],
+        answer: "The accuracy of the model in generating correct and relevant outputs."
+    },
+    {
+        question: "What is the difference between a 'base model' and a 'fine-tuned model'?",
+        options: ["Base models are smaller than fine-tuned models.", "A fine-tuned model is a base model that has been trained further on a smaller, task-specific dataset to improve precision.", "Base models can only be used for chat, while fine-tuned models are for summarization.", "There is no difference; the terms are interchangeable."],
+        answer: "A fine-tuned model is a base model that has been trained further on a smaller, task-specific dataset to improve precision."
+    },
+    {
+        question: "Which evaluation metric measures the alignment between a model's generated answers and the input data provided?",
+        options: ["Coherence", "Fluency", "Groundedness", "Accuracy"],
+        answer: "Groundedness"
+    },
+    {
+        question: "What is the purpose of using 'model benchmarks' when exploring the model catalog?",
+        options: ["To get the exact cost for your specific use case.", "To compare publicly available metrics like quality and cost across different models.", "To deploy a model directly to an endpoint.", "To fine-tune a model with your own data."],
+        answer: "To compare publicly available metrics like quality and cost across different models."
+    },
+    {
+        question: "Which of the following is NOT a question to consider when structuring your approach to finding the best model?",
+        options: ["Can AI solve my use case?", "How do I select the best model for my use case?", "What is the most popular model available?", "Can I scale for real-world workloads?"],
+        answer: "What is the most popular model available?"
+    },
+    {
+        question: "A model like 'Nixtla TimeGEN-1' is an example of what kind of model?",
+        options: ["A general-purpose chat model", "A multi-modal model", "A domain-specific model for time-series forecasting", "An embedding model"],
+        answer: "A domain-specific model for time-series forecasting"
+    },
+    {
+        question: "What is the 'Quality Index' metric used for in the model benchmarks?",
+        options: ["It measures the speed of the model's response time.", "It is a comparative aggregate score, with better-performing models scoring a higher value.", "It calculates the exact accuracy on your private data.", "It represents the number of languages the model supports."],
+        answer: "It is a comparative aggregate score, with better-performing models scoring a higher value."
+    },
+    {
+        question: "What is the recommended first step when evaluating a model's performance for your specific needs?",
+        options: ["Deploying it directly to production.", "Starting with manual evaluations to quickly assess the quality of responses.", "Automating the fine-tuning process immediately.", "Writing a complex client application."],
+        answer: "Starting with manual evaluations to quickly assess the quality of responses."
+    },
+    {
+        question: "Which of these is a key enterprise requirement met by using models through the Azure AI Foundry model catalog?",
+        options: ["Guaranteed free usage for all models.", "The ability to modify the source code of proprietary models.", "Built-in security, compliance, and responsible AI features.", "Automatic deployment to any on-premises server."],
+        answer: "Built-in security, compliance, and responsible AI features."
+    },
+    {
+        question: "What type of model is specifically mentioned as being useful for tasks like math, coding, and logistics due to its high performance?",
+        options: ["Chat completion models", "Reasoning models", "Multi-modal models", "Embedding models"],
+        answer: "Reasoning models"
+    },
+    {
+        question: "A model like 'Core42 JAIS' is specifically designed for which language, making it a good choice for applications targeting that region?",
+        options: ["Spanish", "Mandarin Chinese", "Arabic", "French"],
+        answer: "Arabic"
+    },
+    {
+        question: "Which evaluation metric assesses how well generated text adheres to grammatical rules and syntactic structures?",
+        options: ["Groundedness", "Coherence", "Accuracy", "Fluency"],
+        answer: "Fluency"
+    },
+    {
+        question: "What is the primary function of a multi-modal model like GPT-4o or Phi3-vision?",
+        options: ["To only generate text-based responses.", "To process images, audio, and other data types alongside text.", "To specialize in a single language.", "To run exclusively on edge devices."],
+        answer: "To process images, audio, and other data types alongside text."
+    },
+    {
+        question: "When selecting a model, which of the four characteristics to consider involves deciding if you need to train the model on a specific skill or dataset?",
+        options: ["Task type", "Precision", "Openness", "Deployment"],
+        answer: "Precision"
+    },
+    {
+        question: "Which metric quantifies the semantic similarity between a ground truth sentence and a prediction generated by an AI model?",
+        options: ["Accuracy", "Coherence", "GPT Similarity", "Quality Index"],
+        answer: "GPT Similarity"
+    },
+    {
+        question: "What is the main challenge a developer faces when starting a generative AI project, according to the text?",
+        options: ["Finding enough computing power.", "Understanding if there's a model that satisfies their needs.", "Getting a budget approved.", "Writing the client application code."],
+        answer: "Understanding if there's a model that satisfies their needs."
+    },
+    {
+        question: "The 'Cost' metric in the model benchmarks is useful for comparing against which other metric to determine an appropriate tradeoff?",
+        options: ["Speed", "Quality", "Popularity", "Size"],
+        answer: "Quality"
+    },
+    {
+        question: "What kind of evaluation uses human raters to assess the quality of a model's responses?",
+        options: ["Automated evaluations", "Model benchmarks", "Manual evaluations", "AI-assisted metrics"],
+        answer: "Manual evaluations"
+    },
+    {
+        question: "Which of the following is NOT listed as a consideration for scaling a generative AI solution for real-world workloads?",
+        options: ["Model deployment", "Model monitoring and optimization", "Choosing the most popular model", "Prompt management"],
+        answer: "Choosing the most popular model"
+    }
+]

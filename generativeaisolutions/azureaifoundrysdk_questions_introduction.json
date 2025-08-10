@@ -1,0 +1,77 @@
+[
+    {
+        question: "What is the primary purpose of the Azure AI Foundry SDK?",
+        options: ["To provide a visual interface for model training.", "To bring together common services and code libraries in a project through a central programmatic access point.", "To manage billing and user access for an Azure subscription.", "To replace the need for the Azure portal."],
+        answer: "To bring together common services and code libraries in a project through a central programmatic access point."
+    },
+    {
+        question: "Which core package within the Azure AI Foundry SDK enables you to connect to an Azure AI Foundry project?",
+        options: ["The Azure AI Services library", "The Azure AI Projects library", "The Azure OpenAI library", "The Azure Identity library"],
+        answer: "The Azure AI Projects library"
+    },
+    {
+        question: "In the Python SDK, what class is used to create a programmatic proxy for an Azure AI Foundry project?",
+        options: ["AIClient", "ProjectClient", "AIProjectClient", "FoundryClient"],
+        answer: "AIProjectClient"
+    },
+    {
+        question: "What type of authentication is required for the code to successfully access a project when using `DefaultAzureCredential`?",
+        options: ["API Key authentication", "The code must be run in the context of an authenticated Azure session.", "A connection string stored in the code.", "No authentication is required."],
+        answer: "The code must be run in the context of an authenticated Azure session."
+    },
+    {
+        question: "How can you retrieve a list of all resource connections within a project using the Python SDK?",
+        options: ["project_client.list_connections()", "project_client.connections.list()", "project_client.resources.get()", "project_client.get_all_connections()"],
+        answer: "project_client.connections.list()"
+    },
+    {
+        question: "Which method on the `AIProjectClient` is used to get an authenticated OpenAI client for chatting with a deployed model?",
+        options: ["inference.get_chat_client()", "get_openai_client()", "inference.get_azure_openai_client()", "connections.get_openai_client()"],
+        answer: "inference.get_azure_openai_client()"
+    },
+    {
+        question: "When using the OpenAI chat client provided by an Azure AI Foundry project, what types of models can you interact with?",
+        options: ["Only OpenAI models like GPT-4.", "Only Microsoft models like Phi.", "Any model deployed in the associated Azure AI Foundry resource, including non-OpenAI models.", "Only fine-tuned models."],
+        answer: "Any model deployed in the associated Azure AI Foundry resource, including non-OpenAI models."
+    },
+    {
+        question: "What are the three endpoints provided by an Azure AI Foundry project for client applications?",
+        options: ["Project, Storage, and Compute", "Project, Azure OpenAI Service, and Azure AI services", "Training, Inferencing, and Billing", "SDK, REST API, and Portal"],
+        answer: "Project, Azure OpenAI Service, and Azure AI services"
+    },
+    {
+        question: "To use `DefaultAzureCredential` in your Python code, which package must be installed in addition to `azure-ai-projects`?",
+        options: ["openai", "azure-identity", "requests", "python-dotenv"],
+        answer: "azure-identity"
+    },
+    {
+        question: "What does the `connections.get(connection_name, include_credentials=True)` method return?",
+        options: ["Only the name and type of the connection.", "A connection object including the credentials required to connect to the resource.", "A boolean value indicating if the connection is active.", "A list of all users who can access the connection."],
+        answer: "A connection object including the credentials required to connect to the resource."
+    },
+    {
+        question: "What is the purpose of the `AIProjectClient.deployments` operations in the .NET SDK?",
+        options: ["To deploy new virtual machines.", "To enumerate the AI models deployed to your Foundry Project.", "To manage user permissions.", "To create new project endpoints."],
+        answer: "To enumerate the AI models deployed to your Foundry Project."
+    },
+    {
+        question: "In the .NET SDK, which method on the `AIProjectClient` gives you access to an authenticated `PersistentAgentsClient`?",
+        options: ["GetAgentsClient()", "GetPersistentAgentsClient()", "GetAgentService()", "GetAIAgentsClient()"],
+        answer: "GetPersistentAgentsClient()"
+    },
+    {
+        question: "When an SDK method call to a service fails due to a non-success HTTP status code, what type of exception is typically raised?",
+        options: ["NullReferenceException", "HttpResponseError (Python) or RequestFailedException (.NET)", "AuthenticationError", "TimeoutException"],
+        answer: "HttpResponseError (Python) or RequestFailedException (.NET)"
+    },
+    {
+        question: "How do you install the Azure AI Projects library for Python?",
+        options: ["pip install azure-ai-foundry", "pip install azure-sdk", "pip install azure-ai-projects", "pip install openai"],
+        answer: "pip install azure-ai-projects"
+    },
+    {
+        question: "Which of the following is NOT a capability of the AI Projects client library listed in the document?",
+        options: ["Create and run Agents.", "Enumerate connected Azure resources.", "Manage Azure subscription billing.", "Run Evaluations."],
+        answer: "Manage Azure subscription billing."
+    }
+]

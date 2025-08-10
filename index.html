@@ -13,7 +13,7 @@
   <aside class="w-80 bg-white shadow-md h-screen overflow-y-auto p-4">
     <h2 class="text-xl font-bold mb-4 text-gray-800">📚 Exam AI-102 Quizzes</h2>
     <ul class="space-y-2 text-gray-700" x-data="{ open: {} }">
-
+      <!-- AI Solutions -->     
       <!-- Implement Generative AI Solutions -->
       <li>
         <button @click="open['genAI'] = !open['genAI']" class="w-full text-left font-semibold hover:text-blue-600" style="font-size: 18px;">
@@ -27,10 +27,10 @@
               Plan and Prepare to Develop AI Solutions
             </button>
             <ul x-show="open['prepare']" class="ml-4 mt-1 space-y-1">
-              <li><a href="#" onclick="loadContent('AI Services')" class="block hover:text-blue-500">AI Services</a></li>
-              <li><a href="#" onclick="loadContent('AI Foundry')" class="block hover:text-blue-500">AI Foundry</a></li>
-              <li><a href="#" onclick="loadContent('Responsible AI')" class="block hover:text-blue-500">Responsible AI</a></li>
-              <li><a href="#" onclick="loadContent('Extra Notes')" class="block hover:text-blue-500">Extra Notes</a></li>
+              <li><a href="generativeaisolutions/planprepare_azureaiservices.html" onclick="loadContent('AI Services')" class="block hover:text-blue-500">AI Services</a></li>
+              <li><a href="generativeaisolutions/planprepare_azureaifoundry.html" onclick="loadContent('AI Foundry')" class="block hover:text-blue-500">AI Foundry</a></li>
+              <li><a href="generativeaisolutions/planprepare_responsibleai.html" onclick="loadContent('Responsible AI')" class="block hover:text-blue-500">Responsible AI</a></li>
+              <li><a href="generativeaisolutions/planprepare_extranotes.html" onclick="loadContent('Extra Notes')" class="block hover:text-blue-500">Extra Notes</a></li>
             </ul>
           </li>
 
@@ -40,9 +40,9 @@
               Choose and Deploy Models from the Model Catalog
             </button>
             <ul x-show="open['modelCatalog']" class="ml-4 mt-1 space-y-1">
-              <li><a href="#" onclick="loadContent('The Model Catalog')" class="block hover:text-blue-500">The Model Catalog</a></li>
-              <li><a href="#" onclick="loadContent('Model Deployment')" class="block hover:text-blue-500">Model Deployment</a></li>
-              <li><a href="#" onclick="loadContent('Model Optimization')" class="block hover:text-blue-500">Model Optimization</a></li>
+              <li><a href="generativeaisolutions/modeldeploy_quiz_modelcatalog.html" onclick="loadContent('The Model Catalog')" class="block hover:text-blue-500">The Model Catalog</a></li>
+              <li><a href="generativeaisolutions/modeldeploy_quiz_modeldeployment.html" onclick="loadContent('Model Deployment')" class="block hover:text-blue-500">Model Deployment</a></li>
+              <li><a href="generativeaisolutions/modeldeploy_quiz_modeloptimization.html" onclick="loadContent('Model Optimization')" class="block hover:text-blue-500">Model Optimization</a></li>
             </ul>
           </li>
 

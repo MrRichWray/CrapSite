@@ -1,0 +1,177 @@
+[
+{
+        question: "Which AI capability is described as the ability to generate original responses to natural language prompts?",
+        options: ["Computer Vision", "Generative AI", "Decision Support", "Speech"],
+        answer: "Generative AI"
+    },
+    {
+        question: "An application that analyzes social media messages to categorize them as positive or negative is using which AI capability?",
+        options: ["Information Extraction", "Natural Language Processing", "Agents", "Computer Vision"],
+        answer: "Natural Language Processing"
+    },
+    {
+        question: "What is the primary function of the Azure AI Vision service?",
+        options: ["To translate text between languages.", "To implement text-to-speech and speech-to-text transformations.", "To detect objects, generate captions, and read text in images.", "To create searchable vector indexes for data."],
+        answer: "To detect objects, generate captions, and read text in images."
+    },
+    {
+        question: "If you need to train a custom computer vision model for a specific image classification task, which service should you use?",
+        options: ["Azure AI Vision", "Azure AI Face", "Azure AI Custom Vision", "Azure OpenAI"],
+        answer: "Azure AI Custom Vision"
+    },
+    {
+        question: "What is a key use case for Azure AI Search in a generative AI solution?",
+        options: ["To fine-tune the language model.", "To create vector indexes for data to ground prompts.", "To flag potentially offensive content.", "To generate images from text prompts."],
+        answer: "To create vector indexes for data to ground prompts."
+    },
+    {
+        question: "What is a primary advantage of provisioning a multi-service Azure AI resource over standalone resources?",
+        options: ["It provides access to a free-tier SKU.", "It allows for easier management of applications that use multiple AI capabilities.", "It is the only way to access Azure AI Vision.", "It is required for all medium to large-scale development scenarios."],
+        answer: "It allows for easier management of applications that use multiple AI capabilities."
+    },
+    {
+        question: "Which multi-service resource type includes Azure OpenAI and is recommended for use with Azure AI Foundry projects?",
+        options: ["Azure AI Service", "Azure AI Foundry", "Azure AI Custom Vision", "Azure AI Search"],
+        answer: "Azure AI Foundry"
+    },
+    {
+        question: "What should you consult to determine the regional availability for Azure OpenAI models?",
+        options: ["The Azure pricing calculator.", "The product availability table for all Azure services.", "The model availability table in the Azure OpenAI documentation.", "The Azure AI Foundry portal."],
+        answer: "The model availability table in the Azure OpenAI documentation."
+    },
+    {
+        question: "An 'executive assistant' agent that can automate booking a taxi for a meeting is an example of which AI capability?",
+        options: ["Decision Support", "Agents", "Information Extraction", "Speech"],
+        answer: "Agents"
+    },
+    {
+        question: "What is the term for language models that have been trained on huge volumes of data and include many millions of parameters?",
+        options: ["Small Language Models (SLMs)", "Multi-modal models", "Custom Vision Models", "Large Language Models (LLMs)"],
+        answer: "Large Language Models (LLMs)"
+    },
+    {
+        question: "Which Azure AI service is a specialized computer vision implementation for detecting and recognizing human faces, with some restricted features?",
+        options: ["Azure AI Vision", "Azure AI Custom Vision", "Azure AI Face", "Azure AI Content Understanding"],
+        answer: "Azure AI Face"
+    },
+    {
+        question: "For most medium to large-scale development, what is the recommended way to provision Azure AI services resources?",
+        options: ["As standalone resources only.", "As part of an Azure AI Foundry project.", "Directly through the Azure command-line interface.", "Using the free-tier SKU for all services."],
+        answer: "As part of an Azure AI Foundry project."
+    },
+    {
+        question: "Which of the following services is included in the 'Azure AI Service' multi-service resource but NOT explicitly listed as a separate service in the 'Azure AI Foundry' multi-service resource?",
+        options: ["Azure AI Speech", "Azure AI Custom Vision", "Azure AI Language", "Azure OpenAI"],
+        answer: "Azure AI Custom Vision"
+    },
+    {
+        question: "What tool can be used to estimate the costs your expected usage of Azure AI services will incur?",
+        options: ["The Azure AI Foundry portal", "The Azure pricing calculator", "The Azure command-line interface", "The model availability table"],
+        answer: "The Azure pricing calculator"
+    },
+    {
+        question: "An automated expense claims application that extracts purchase dates and total costs from a scanned receipt is using which AI capability?",
+        options: ["Generative AI", "Decision Support", "Information Extraction", "Agents"],
+        answer: "Information Extraction"
+    },
+    {
+        question: "What is a multi-modal model capable of handling?",
+        options: ["Only text-based prompts.", "Only speech-based prompts.", "Image or speech prompts in addition to text.", "Only generating code."],
+        answer: "Image or speech prompts in addition to text."
+    },
+    {
+        question: "Which Azure AI service provides multi-modal content analysis to extract data from forms, documents, images, videos, and audio streams?",
+        options: ["Azure AI Document Intelligence", "Azure AI Content Understanding", "Azure AI Vision", "Azure AI Language"],
+        answer: "Azure AI Content Understanding"
+    },
+    {
+        question: "What is a benefit of provisioning standalone Azure AI services?",
+        options: ["They are always more powerful than multi-service resources.", "They often include a free-tier SKU for evaluation.", "They are required for Azure AI Foundry projects.", "They provide a single endpoint for all services."],
+        answer: "They often include a free-tier SKU for evaluation."
+    },
+    {
+        question: "What is the core technology that modern AI solutions are built on, according to the text?",
+        options: ["Simple if-then logic statements.", "Manually coded algorithms.", "Machine learning models.", "Relational databases."],
+        answer: "Machine learning models."
+    },
+    {
+        question: "Which Azure service is used to flag content that is potentially offensive, risky, or otherwise undesirable?",
+        options: ["Azure AI Translator", "Azure AI Foundry Content Safety", "Azure AI Speech", "Azure AI Face"],
+        answer: "Azure AI Foundry Content Safety"
+    },
+    {
+        question: "What is the primary purpose of the Azure AI Translator service?",
+        options: ["To analyze the sentiment of text.", "To translate text between a large number of languages.", "To recognize speakers from their voice.", "To extract entities from documents."],
+        answer: "To translate text between a large number of languages."
+    },
+    {
+        question: "An AI capability that analyzes demographic and economic factors to predict real estate market trends is an example of:",
+        options: ["Generative AI", "Decision Support", "Computer Vision", "Agents"],
+        answer: "Decision Support"
+    },
+    {
+        question: "Which two multi-service resource types are available for provisioning multiple AI services?",
+        options: ["Azure AI Vision and Azure AI Language", "Azure AI Services and Azure AI Foundry", "Azure OpenAI and Azure AI Search", "Standalone and Free-Tier"],
+        answer: "Azure AI Services and Azure AI Foundry"
+    },
+    {
+        question: "What is the purpose of an 'endpoint' for an Azure AI resource?",
+        options: ["It is a security key for authentication.", "It is the physical location of the data center.", "It is the URL where the service can be consumed by an application.", "It is a tool for estimating costs."],
+        answer: "It is the URL where the service can be consumed by an application."
+    },
+    {
+        question: "Which service would you use to build a conversational language model or a question-answering solution?",
+        options: ["Azure AI Vision", "Azure AI Speech", "Azure AI Language", "Azure AI Translator"],
+        answer: "Azure AI Language"
+    },
+    {
+        question: "Which Responsible AI principle states that systems should treat all people fairly and avoid bias?",
+        options: ["Transparency", "Accountability", "Fairness", "Inclusiveness"],
+        answer: "Fairness"
+    },
+    {
+        question: "What is a key practice for ensuring Fairness in an AI model, such as one for loan approvals?",
+        options: ["Using the largest possible dataset.", "Carefully reviewing training data to ensure it's representative of all groups.", "Applying the highest security standards.", "Making the model's decisions easy to understand."],
+        answer: "Carefully reviewing training data to ensure it's representative of all groups."
+    },
+    {
+        question: "The principle of Reliability and Safety is particularly critical for which type of AI system?",
+        options: ["A system that recommends movies.", "A system for an autonomous vehicle.", "A system that generates advertising copy.", "A system that translates languages."],
+        answer: "A system for an autonomous vehicle."
+    },
+    {
+        question: "What does the 'probabilistic nature' of machine learning models mean for developers?",
+        options: ["The models are always 100% correct.", "Developers must apply thresholds when evaluating confidence scores for predictions.", "The models can only be used for probability calculations.", "The models require minimal testing."],
+        answer: "Developers must apply thresholds when evaluating confidence scores for predictions."
+    },
+    {
+        question: "Which Responsible AI principle is concerned with making users fully aware of a system's purpose, how it works, and its limitations?",
+        options: ["Privacy and Security", "Inclusiveness", "Transparency", "Fairness"],
+        answer: "Transparency"
+    },
+    {
+        question: "The principle of Accountability in Responsible AI emphasizes that:",
+        options: ["The AI system itself is solely accountable for its actions.", "Users are accountable for how they use the AI.", "The developers and designers of the AI system are ultimately responsible for it.", "Only legal experts can determine accountability."],
+        answer: "The developers and designers of the AI system are ultimately responsible for it."
+    },
+    {
+        question: "How can developers optimize for the 'Inclusiveness' principle?",
+        options: ["By making the user interface visually appealing.", "By ensuring the design and testing process includes input from a diverse group of people.", "By using the most complex algorithms available.", "By ensuring the application is profitable."],
+        answer: "By ensuring the design and testing process includes input from a diverse group of people."
+    },
+    {
+        question: "What is the primary concern of the 'Privacy and Security' principle in Responsible AI?",
+        options: ["Ensuring the AI model performs quickly.", "Making the AI system's decisions understandable.", "Protecting personal details that may be in the large volumes of data used by models.", "Making the AI available to everyone."],
+        answer: "Protecting personal details that may be in the large volumes of data used by models."
+    },
+    {
+        question: "Sharing information about a model's confidence score for a prediction aligns with which Responsible AI principle?",
+        options: ["Fairness", "Transparency", "Accountability", "Reliability and Safety"],
+        answer: "Transparency"
+    },
+    {
+        question: "What does the text suggest is the ultimate responsibility of developers regarding AI systems, even if they seem to operate autonomously?",
+        options: ["To ensure the system is always online.", "To continuously add new features.", "To ensure the system meets responsible and legal standards.", "To make the system as complex as possible."],
+        answer: "To ensure the system meets responsible and legal standards."
+    }
+]

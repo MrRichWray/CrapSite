@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- STEP 1: (Optional) Change the browser tab title -->
+    <title>Quiz Template</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            touch-action: manipulation; /* Prevents double-tap zoom on mobile */
+        }
+        .quiz-option {
+            transition: all 0.2s ease-in-out;
+        }
+        .quiz-option:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .correct {
+            background-color: #dcfce7 !important; /* Lighter green */
+            border-color: #22c55e !important;
+            color: #15803d;
+        }
+        .incorrect {
+            background-color: #fee2e2 !important; /* Lighter red */
+            border-color: #ef4444 !important;
+            color: #b91c1c;
+        }
+        .correct-answer-text {
+            color: #16a34a;
+            font-weight: 600;
+        }
+        /* Animation for modal */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .modal-fade-in {
+            animation: fadeIn 0.3s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-2 sm:p-4">
+
+    <!-- Title Page Container -->
+    <div id="title-container" class="w-full max-w-2xl bg-white p-8 sm:p-12 rounded-2xl shadow-lg text-center">
+        <!-- STEP 2: Update the quiz title and subtitle on the title page -->
+        <h1 class="text-3xl sm:text-4xl font-bold text-gray-800">Plan and Prepare</h1>
+        <p class="text-lg text-gray-600 mt-4">Azure AI Foundry</p>
+        <p id="title-pool-count" class="text-md text-gray-500 mt-6">Total questions in pool: 0</p>
+        <button id="begin-quiz-btn" class="mt-8 w-full py-3 px-6 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75 text-lg">Begin Quiz</button>
+        <!-- Added Exit Link -->
+        <a href="../index.html" class="mt-4 inline-block text-sm text-gray-500 hover:underline">Exit to Main Page</a>
+    </div>
+
+    <!-- Quiz Container -->
+    <div id="quiz-container" class="hidden w-full max-w-2xl bg-white p-6 sm:p-8 rounded-2xl shadow-lg">
+        <!-- Header -->
+        <div class="mb-6">
+            <div id="progress-container" class="w-full bg-gray-200 rounded-full h-2.5">
+                <div id="progress-bar" class="bg-blue-600 h-2.5 rounded-full transition-all duration-300 ease-out"></div>
+            </div>
+            <div class="flex justify-between items-center mt-2">
+                <div id="progress-text" class="text-sm text-gray-600">Question 0 of 0</div>
+                <!-- Added Exit Link to quiz header -->
+                <div>
+                    <button id="restart-quiz-ingame-btn" class="text-sm font-semibold text-blue-600 hover:underline focus:outline-none">Restart Quiz</button>
+                    <a href="../index.html" class="ml-4 text-sm font-semibold text-gray-500 hover:underline focus:outline-none">Exit</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question Area -->
+        <div id="question-area" class="mb-6 min-h-[6rem] flex items-center justify-center">
+            <h2 id="question-text" class="text-lg sm:text-xl font-semibold text-gray-700 text-center"></h2>
+        </div>
+
+        <!-- Options Area -->
+        <div id="options-container" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Options will be dynamically inserted here -->
+        </div>
+
+        <!-- Feedback Area -->
+        <div id="feedback-area" class="mt-6 text-center min-h-[4rem] flex items-center justify-center p-2">
+             <p id="feedback-text" class="font-medium text-base"></p>
+        </div>
+
+
+        <!-- Navigation -->
+        <div class="mt-6 flex justify-between items-center">
+            <button id="prev-btn" class="py-2 px-4 bg-gray-300 text-gray-700 font-semibold rounded-lg shadow-md hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-75 disabled:opacity-50 disabled:cursor-not-allowed">Previous</button>
+            <button id="next-btn" class="py-2 px-6 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75">Next</button>
+        </div>
+    </div>
+
+    <!-- Final Score Modal -->
+    <div id="score-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+        <div class="bg-white p-8 rounded-2xl shadow-2xl text-center w-full max-w-md modal-fade-in">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Quiz Complete!</h2>
+            <p class="text-gray-600 mb-2">Your final score is:</p>
+            <p id="final-score" class="text-5xl font-extrabold text-blue-600 mb-6">0/0</p>
+            <p id="score-message" class="text-lg font-medium text-gray-700 mb-6"></p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                 <button id="repeat-quiz-btn" class="w-full py-3 px-6 bg-gray-600 text-white font-semibold rounded-lg shadow-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-75">Repeat Quiz</button>
+                <button id="new-quiz-btn" class="w-full py-3 px-6 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75">New Quiz</button>
+            </div>
+            <!-- Added Exit Link -->
+            <a href="../index.html" class="mt-4 inline-block text-sm text-gray-500 hover:underline">Exit to Main Page</a>
+        </div>
+    </div>
+
+
+    <script>
+        // STEP 3: Replace the content of this array with your new questions.
+        // Ensure each question object follows this format:
+        // { 
+        //   question: "Your question text here?", 
+        //   options: ["Option A", "Option B", "Option C", "Option D"], 
+        //   answer: "The exact text of the correct option" 
+        // },
+        const questionPool = [
+            // ==> PASTE YOUR NEW QUESTION POOL ARRAY HERE <==
+            // EXAMPLE:
+    {
+        question: "What is the primary purpose of Azure AI Foundry?",
+        options: ["To provide a free tier for all AI services.", "To act as a comprehensive platform for AI development, simplifying resource management and large-scale model development.", "To offer customer support for AI solutions.", "To replace the need for developer tools like Visual Studio Code."],
+        answer: "To act as a comprehensive platform for AI development, simplifying resource management and large-scale model development."
+    },
+    {
+        question: "What are the two kinds of projects you can create in Azure AI Foundry?",
+        options: ["Standard and Premium projects", "Foundry projects and Hub-based projects", "Internal and External projects", "Developer and Admin projects"],
+        answer: "Foundry projects and Hub-based projects"
+    },
+    {
+        question: "Which type of Azure AI Foundry project is associated with an Azure AI Hub resource and supports advanced scenarios like Prompt Flow development?",
+        options: ["Foundry project", "Hub-based project", "Standalone project", "Connected project"],
+        answer: "Hub-based project"
+    },
+    {
+        question: "Which of the following is NOT a resource included with a Hub-based project?",
+        options: ["Managed compute", "Support for Prompt Flow development", "An Azure Virtual Machine for hosting", "Azure Key Vault resources"],
+        answer: "An Azure Virtual Machine for hosting"
+    },
+    {
+        question: "What is the primary interface for developers to simplify tasks like creating projects and deploying models within Visual Studio Code?",
+        options: ["The Azure Portal", "The Azure AI Foundry for Visual Studio Code extension", "The GitHub Copilot chat", "The Azure AI Foundry SDK"],
+        answer: "The Azure AI Foundry for Visual Studio Code extension"
+    },
+    {
+        question: "Which tool is described as an AI assistant that can significantly improve developer productivity within an IDE?",
+        options: ["Azure AI Foundry Agent Service", "GitHub Copilot", "Prompt Flow", "Azure AI Foundry portal"],
+        answer: "GitHub Copilot"
+    },
+    {
+        question: "Which SDK enables you to write code to connect to Azure AI Foundry projects and access their resource connections?",
+        options: ["The Azure AI Services SDK", "The Azure AI Foundry SDK", "The Azure OpenAI API", "The Semantic Kernel SDK"],
+        answer: "The Azure AI Foundry SDK"
+    },
+    {
+        question: "Which API is specifically used for building chat applications based on OpenAI models hosted in Azure AI Foundry?",
+        options: ["The Azure AI Foundry Models API", "The Azure AI Services REST API", "The Azure OpenAI in Azure AI Foundry Models API", "The GitHub API"],
+        answer: "The Azure OpenAI in Azure AI Foundry Models API"
+    },
+    {
+        question: "What is the recommended way to build all but the most simple AI solutions on Azure, according to the document?",
+        options: ["Using standalone Azure AI service resources.", "Using Azure AI Foundry.", "Building custom models from scratch.", "Deploying services only in containers."],
+        answer: "Using Azure AI Foundry."
+    },
+    {
+        question: "Which type of Azure AI Foundry project is generally sufficient for developing generative AI chat apps and agents with minimal administrative overhead?",
+        options: ["Hub-based project", "Foundry project", "Enterprise project", "Custom project"],
+        answer: "Foundry project"
+    },
+    {
+        question: "What is the purpose of the Azure AI Foundry Agent Service?",
+        options: ["To manage user permissions within a project.", "To provide a visual interface for model deployment.", "To be integrated with frameworks like Semantic Kernel to build comprehensive AI agent solutions.", "To monitor the costs of an AI project."],
+        answer: "To be integrated with frameworks like Semantic Kernel to build comprehensive AI agent solutions."
+    },
+    {
+        question: "Hub-based projects can be used in both the Azure AI Foundry portal and which other portal, facilitating collaboration with data scientists?",
+        options: ["The Azure Active Directory portal", "The Azure DevOps portal", "The Azure Machine Learning portal", "The Microsoft 365 Admin Center"],
+        answer: "The Azure Machine Learning portal"
+    },
+    {
+        question: "What does the Azure AI Foundry SDK provide for developers?",
+        options: ["A no-code graphical interface for building apps.", "A way to build AI solutions programmatically.", "A free set of pre-trained models.", "A direct connection to Azure support."],
+        answer: "A way to build AI solutions programmatically."
+    },
+    {
+        question: "Which of the following is a key task simplified by the Azure AI Foundry for Visual Studio Code extension?",
+        options: ["Managing Azure subscription billing.", "Creating a new Azure subscription.", "Testing a model in the playground.", "Writing documentation for the AI model."],
+        answer: "Testing a model in the playground."
+    },
+    {
+        question: "What provides an interface for working with generative AI model endpoints hosted in Azure AI Foundry?",
+        options: ["The Azure AI Foundry Agent Service", "The Azure AI Foundry Models API", "The Azure AI Services SDKs", "GitHub Copilot"],
+        answer: "The Azure AI Foundry Models API"
+    }
+
+        ];
+
+        // --- DOM Elements ---
+        const titleContainer = document.getElementById('title-container');
+        const quizContainer = document.getElementById('quiz-container');
+        const beginQuizBtn = document.getElementById('begin-quiz-btn');
+        const titlePoolCount = document.getElementById('title-pool-count');
+        const questionText = document.getElementById('question-text');
+        const optionsContainer = document.getElementById('options-container');
+        const feedbackText = document.getElementById('feedback-text');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const progressBar = document.getElementById('progress-bar');
+        const progressText = document.getElementById('progress-text');
+        const scoreModal = document.getElementById('score-modal');
+        const finalScore = document.getElementById('final-score');
+        const scoreMessage = document.getElementById('score-message');
+        const newQuizBtn = document.getElementById('new-quiz-btn');
+        const repeatQuizBtn = document.getElementById('repeat-quiz-btn');
+        const restartQuizIngameBtn = document.getElementById('restart-quiz-ingame-btn');
+
+        // --- State Variables ---
+        let currentQuizQuestions = [];
+        let currentQuestionIndex = 0;
+        let userAnswers = [];
+        let questionsAnswered = false;
+        const PASSING_SCORE_PERCENTAGE = 90;
+
+        // --- Functions (No changes needed below this line) ---
+        
+        function startNewQuiz() {
+            currentQuizQuestions = [...questionPool];
+            resetQuizState();
+            loadQuestion();
+        }
+        
+        function repeatQuiz() {
+            resetQuizState();
+            loadQuestion();
+        }
+
+        function resetQuizState() {
+            currentQuestionIndex = 0;
+            userAnswers = new Array(currentQuizQuestions.length).fill(null);
+            questionsAnswered = false;
+            
+            scoreModal.classList.add('hidden');
+            const modalContent = scoreModal.querySelector('div');
+            modalContent.classList.remove('modal-fade-in');
+        }
+
+        function loadQuestion() {
+            feedbackText.textContent = '';
+            feedbackText.className = 'font-medium text-base';
+            optionsContainer.innerHTML = '';
+            questionsAnswered = false;
+
+            if (!currentQuizQuestions || currentQuizQuestions.length === 0) {
+                questionText.textContent = "Loading quiz...";
+                return;
+            }
+
+            const currentQuestion = currentQuizQuestions[currentQuestionIndex];
+            questionText.textContent = currentQuestion.question;
+
+            currentQuestion.options.forEach(option => {
+                const button = document.createElement('button');
+                button.textContent = option;
+                button.classList.add('quiz-option', 'w-full', 'text-left', 'p-4', 'bg-gray-50', 'border', 'border-gray-300', 'rounded-lg', 'hover:bg-blue-100', 'focus:outline-none', 'focus:ring-2', 'focus:ring-blue-300');
+                button.onclick = () => selectOption(button, option);
+                optionsContainer.appendChild(button);
+            });
+
+            updateProgress();
+            updateNavigation();
+            showPreviousAnswer();
+        }
+
+        function selectOption(selectedButton, selectedOption) {
+            if (questionsAnswered) return; 
+            questionsAnswered = true;
+            userAnswers[currentQuestionIndex] = selectedOption;
+
+            const currentQuestion = currentQuizQuestions[currentQuestionIndex];
+            const isCorrect = selectedOption === currentQuestion.answer;
+            
+            if (isCorrect) {
+                selectedButton.classList.add('correct');
+                feedbackText.textContent = "Correct!";
+                feedbackText.classList.add('text-green-600');
+            } else {
+                selectedButton.classList.add('incorrect');
+                feedbackText.innerHTML = `Incorrect. The correct answer is: <strong class="correct-answer-text">${currentQuestion.answer}</strong>`;
+                feedbackText.classList.add('text-red-600');
+            }
+
+            Array.from(optionsContainer.children).forEach(btn => {
+                btn.disabled = true;
+                if (btn.textContent === currentQuestion.answer) {
+                    btn.classList.add('correct');
+                }
+            });
+            
+            setTimeout(() => {
+                if (currentQuestionIndex < currentQuizQuestions.length - 1) {
+                    nextQuestion();
+                } else {
+                    showScore();
+                }
+            }, 2500);
+        }
+        
+        function showPreviousAnswer() {
+            const previousAnswer = userAnswers[currentQuestionIndex];
+            if (previousAnswer !== null) {
+                questionsAnswered = true;
+                const currentQuestion = currentQuizQuestions[currentQuestionIndex];
+                const isCorrect = previousAnswer === currentQuestion.answer;
+
+                if (isCorrect) {
+                    feedbackText.textContent = "Correct!";
+                    feedbackText.classList.add('text-green-600');
+                } else {
+                    feedbackText.innerHTML = `Incorrect. The correct answer is: <strong class="correct-answer-text">${currentQuestion.answer}</strong>`;
+                    feedbackText.classList.add('text-red-600');
+                }
+
+                Array.from(optionsContainer.children).forEach(btn => {
+                    btn.disabled = true;
+                    if (btn.textContent === currentQuestion.answer) {
+                        btn.classList.add('correct');
+                    }
+                    if (btn.textContent === previousAnswer && !isCorrect) {
+                        btn.classList.add('incorrect');
+                    }
+                });
+            }
+        }
+
+        function updateProgress() {
+            const progressPercentage = ((currentQuestionIndex + 1) / currentQuizQuestions.length) * 100;
+            progressBar.style.width = `${progressPercentage}%`;
+            progressText.textContent = `Question ${currentQuestionIndex + 1} of ${currentQuizQuestions.length}`;
+        }
+
+        function updateNavigation() {
+            prevBtn.disabled = currentQuestionIndex === 0;
+            nextBtn.textContent = (currentQuestionIndex === currentQuizQuestions.length - 1) ? 'Finish' : 'Next';
+        }
+        
+        function nextQuestion() {
+            if (currentQuestionIndex < currentQuizQuestions.length - 1) {
+                currentQuestionIndex++;
+                loadQuestion();
+            } else {
+                showScore();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                loadQuestion();
+            }
+        }
+
+        function showScore() {
+            quizContainer.classList.add('hidden');
+            scoreModal.classList.remove('hidden');
+            
+            const modalContent = scoreModal.querySelector('div');
+            modalContent.classList.add('modal-fade-in');
+
+            let correctCount = 0;
+            userAnswers.forEach((answer, index) => {
+                if (answer === currentQuizQuestions[index].answer) {
+                    correctCount++;
+                }
+            });
+
+            const scorePercentage = (correctCount / currentQuizQuestions.length) * 100;
+            finalScore.textContent = `${correctCount}/${currentQuizQuestions.length} (${scorePercentage.toFixed(0)}%)`;
+
+            if (scorePercentage >= PASSING_SCORE_PERCENTAGE) {
+                scoreMessage.textContent = "Congratulations, you passed! You have a strong grasp of this material.";
+                scoreMessage.classList.add('text-green-600');
+                scoreMessage.classList.remove('text-red-600');
+            } else {
+                scoreMessage.textContent = "You did not pass. A score of 90% is required. Please review the material and try again.";
+                scoreMessage.classList.add('text-red-600');
+                scoreMessage.classList.remove('text-green-600');
+            }
+        }
+
+        // --- Event Listeners ---
+        nextBtn.addEventListener('click', nextQuestion);
+        prevBtn.addEventListener('click', prevQuestion);
+        
+        newQuizBtn.addEventListener('click', () => {
+            quizContainer.classList.remove('hidden');
+            startNewQuiz();
+        });
+        
+        repeatQuizBtn.addEventListener('click', () => {
+            quizContainer.classList.remove('hidden');
+            repeatQuiz();
+        });
+
+        restartQuizIngameBtn.addEventListener('click', repeatQuiz);
+
+        // --- Initial Load ---
+        document.addEventListener('DOMContentLoaded', () => {
+            titleContainer.classList.remove('hidden');
+            quizContainer.classList.add('hidden');
+            scoreModal.classList.add('hidden');
+            
+            titlePoolCount.textContent = `Total questions in pool: ${questionPool.length}`;
+            
+            beginQuizBtn.addEventListener('click', () => {
+                titleContainer.classList.add('hidden');
+                quizContainer.classList.remove('hidden');
+                startNewQuiz();
+            });
+        });
+    </script>
+</body>
+</html>

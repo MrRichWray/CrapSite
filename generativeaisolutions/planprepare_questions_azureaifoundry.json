@@ -1,0 +1,75 @@
+{
+        question: "What is the primary purpose of Azure AI Foundry?",
+        options: ["To provide a free tier for all AI services.", "To act as a comprehensive platform for AI development, simplifying resource management and large-scale model development.", "To offer customer support for AI solutions.", "To replace the need for developer tools like Visual Studio Code."],
+        answer: "To act as a comprehensive platform for AI development, simplifying resource management and large-scale model development."
+    },
+    {
+        question: "What are the two kinds of projects you can create in Azure AI Foundry?",
+        options: ["Standard and Premium projects", "Foundry projects and Hub-based projects", "Internal and External projects", "Developer and Admin projects"],
+        answer: "Foundry projects and Hub-based projects"
+    },
+    {
+        question: "Which type of Azure AI Foundry project is associated with an Azure AI Hub resource and supports advanced scenarios like Prompt Flow development?",
+        options: ["Foundry project", "Hub-based project", "Standalone project", "Connected project"],
+        answer: "Hub-based project"
+    },
+    {
+        question: "Which of the following is NOT a resource included with a Hub-based project?",
+        options: ["Managed compute", "Support for Prompt Flow development", "An Azure Virtual Machine for hosting", "Azure Key Vault resources"],
+        answer: "An Azure Virtual Machine for hosting"
+    },
+    {
+        question: "What is the primary interface for developers to simplify tasks like creating projects and deploying models within Visual Studio Code?",
+        options: ["The Azure Portal", "The Azure AI Foundry for Visual Studio Code extension", "The GitHub Copilot chat", "The Azure AI Foundry SDK"],
+        answer: "The Azure AI Foundry for Visual Studio Code extension"
+    },
+    {
+        question: "Which tool is described as an AI assistant that can significantly improve developer productivity within an IDE?",
+        options: ["Azure AI Foundry Agent Service", "GitHub Copilot", "Prompt Flow", "Azure AI Foundry portal"],
+        answer: "GitHub Copilot"
+    },
+    {
+        question: "Which SDK enables you to write code to connect to Azure AI Foundry projects and access their resource connections?",
+        options: ["The Azure AI Services SDK", "The Azure AI Foundry SDK", "The Azure OpenAI API", "The Semantic Kernel SDK"],
+        answer: "The Azure AI Foundry SDK"
+    },
+    {
+        question: "Which API is specifically used for building chat applications based on OpenAI models hosted in Azure AI Foundry?",
+        options: ["The Azure AI Foundry Models API", "The Azure AI Services REST API", "The Azure OpenAI in Azure AI Foundry Models API", "The GitHub API"],
+        answer: "The Azure OpenAI in Azure AI Foundry Models API"
+    },
+    {
+        question: "What is the recommended way to build all but the most simple AI solutions on Azure, according to the document?",
+        options: ["Using standalone Azure AI service resources.", "Using Azure AI Foundry.", "Building custom models from scratch.", "Deploying services only in containers."],
+        answer: "Using Azure AI Foundry."
+    },
+    {
+        question: "Which type of Azure AI Foundry project is generally sufficient for developing generative AI chat apps and agents with minimal administrative overhead?",
+        options: ["Hub-based project", "Foundry project", "Enterprise project", "Custom project"],
+        answer: "Foundry project"
+    },
+    {
+        question: "What is the purpose of the Azure AI Foundry Agent Service?",
+        options: ["To manage user permissions within a project.", "To provide a visual interface for model deployment.", "To be integrated with frameworks like Semantic Kernel to build comprehensive AI agent solutions.", "To monitor the costs of an AI project."],
+        answer: "To be integrated with frameworks like Semantic Kernel to build comprehensive AI agent solutions."
+    },
+    {
+        question: "Hub-based projects can be used in both the Azure AI Foundry portal and which other portal, facilitating collaboration with data scientists?",
+        options: ["The Azure Active Directory portal", "The Azure DevOps portal", "The Azure Machine Learning portal", "The Microsoft 365 Admin Center"],
+        answer: "The Azure Machine Learning portal"
+    },
+    {
+        question: "What does the Azure AI Foundry SDK provide for developers?",
+        options: ["A no-code graphical interface for building apps.", "A way to build AI solutions programmatically.", "A free set of pre-trained models.", "A direct connection to Azure support."],
+        answer: "A way to build AI solutions programmatically."
+    },
+    {
+        question: "Which of the following is a key task simplified by the Azure AI Foundry for Visual Studio Code extension?",
+        options: ["Managing Azure subscription billing.", "Creating a new Azure subscription.", "Testing a model in the playground.", "Writing documentation for the AI model."],
+        answer: "Testing a model in the playground."
+    },
+    {
+        question: "What provides an interface for working with generative AI model endpoints hosted in Azure AI Foundry?",
+        options: ["The Azure AI Foundry Agent Service", "The Azure AI Foundry Models API", "The Azure AI Services SDKs", "GitHub Copilot"],
+        answer: "The Azure AI Foundry Models API"
+    }
