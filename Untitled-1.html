@@ -11,13 +11,13 @@
 
   <!-- Sidebar Navigation -->
   <aside class="w-80 bg-white shadow-md h-screen overflow-y-auto p-4">
-    <h2 class="text-xl font-bold mb-4 text-gray-800">📚 Exam AI-102 Quizzes</h2>
+    <h2 class="text-xl font-bold mb-4 text-gray-800">📚 AI Navigation</h2>
     <ul class="space-y-2 text-gray-700" x-data="{ open: {} }">
 
       <!-- Implement Generative AI Solutions -->
       <li>
-        <button @click="open['genAI'] = !open['genAI']" class="w-full text-left font-semibold hover:text-blue-600" style="font-size: 18px;">
-          Generative AI Solutions
+        <button @click="open['genAI'] = !open['genAI']" class="w-full text-left font-semibold hover:text-blue-600">
+          Implement Generative AI Solutions
         </button>
         <ul x-show="open['genAI']" class="ml-4 mt-2 space-y-2">
 
@@ -81,7 +81,7 @@
 
       <!-- Agentic Solutions -->
       <li>
-        <button @click="open['agentic'] = !open['agentic']" class="w-full text-left font-semibold hover:text-blue-600" style="font-size: 18px;">
+        <button @click="open['agentic'] = !open['agentic']" class="w-full text-left font-semibold hover:text-blue-600">
           Agentic Solutions
         </button>
         <ul x-show="open['agentic']" class="ml-4 mt-2 space-y-2">
